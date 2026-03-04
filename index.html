@@ -50,7 +50,8 @@
         }
 
         .container {
-            max-width: 1000px; /* Thoda badha diya taaki 2 cards acche se fit hon */
+            max-width: 1000px;
+            /* Thoda badha diya taaki 2 cards acche se fit hon */
             margin: 0 auto;
             padding-bottom: 10vh;
             position: relative;
@@ -66,13 +67,39 @@
         }
 
         .logo {
+            display: flex;
+            align-items: center;
+            gap: 0px;
+            /* Reduced gap from 12px to 8px */
             font-weight: 800;
             font-size: 1.5rem;
             letter-spacing: -1px;
+            cursor: pointer;
         }
 
         .logo span {
             color: var(--accent);
+        }
+
+        /* --- THE ANT LOGO ANIMATION --- */
+        .ant-icon {
+            height: 65px;
+            /* Increased size from 40px to 48px */
+            width: auto;
+
+            /* Pivot point remains at the back legs */
+            transform-origin: 20% 90%;
+
+            /* Snappy transition */
+            transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+            margin-right: -36px;
+        }
+
+        /* Hover effect: Less rotation */
+        .logo:hover .ant-icon {
+            /* Reduced rotation from -35deg to -18deg, adjusted translation */
+            transform: rotate(-18deg) translateY(-4px) translateX(2px);
         }
 
         #theme-toggle {
@@ -153,7 +180,8 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            object-position: top; /* Ensures the top part of the website shows */
+            object-position: top;
+            /* Ensures the top part of the website shows */
             transition: transform 0.5s ease;
         }
 
@@ -237,7 +265,10 @@
 
     <div class="container">
         <nav>
-            <div class="logo">ANT Dev<span>.</span></div>
+            <div class="logo">
+                <img src="ANT_DEV_LOGO.png" alt="ANT Dev Logo" class="ant-icon">
+                ANT Dev<span>.</span>
+            </div>
             <button id="theme-toggle" aria-label="Toggle Theme">☀️</button>
         </nav>
 
@@ -272,7 +303,8 @@
                     <div class="card-content">
                         <span class="tag">[Web App]</span>
                         <h3>Cricket Manager ↗</h3>
-                        <p>A comprehensive web dashboard built to handle the exact needs of college teams, tracking player stats and streamlining tournament management.</p>
+                        <p>A comprehensive web dashboard built to handle the exact needs of college teams, tracking
+                            player stats and streamlining tournament management.</p>
                     </div>
                 </a>
             </div>
@@ -291,7 +323,7 @@
             <h2>Connect Us</h2>
             <p style="color: var(--text-muted); margin-bottom: 2rem;">Ready to get your business online? Let's talk
                 about your project.</p>
-            <a href="mailto:antdev@gmail.com" class="btn">Start a Project ➔</a>
+            <a href="mailto:antdevelopersindia@gmail.com" class="btn">Start a Project ➔</a>
         </section>
     </div>
 
